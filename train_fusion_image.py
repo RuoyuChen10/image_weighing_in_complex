@@ -1,0 +1,12 @@
+from train import Train_API
+from Fusion import Fusion
+
+'''
+融合单图输入模式
+'''
+
+if __name__ == '__main__':
+    main =  Train_API()
+    main.duckdata=Fusion()
+    main.datasets, main.label, main.test_data, main.test_label = main.duckdata.load_fusion_datasets()#读取数据
+    main.train()
